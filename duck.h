@@ -20,7 +20,9 @@ public:
 };
 
 class FlyNoWay : public FlyBehavior {
-    /* TODO */
+    void fly() override {
+        cout << "I can't fly..." << endl;
+    }
 };
 
 //---------------------------------------------------
@@ -33,7 +35,10 @@ public:
 
 // 전략 구현 클래스들
 class Quack : public QuackBehavior {
-    /* TODO */
+public:
+    void quack() override {
+        cout << "Quack!" << endl;
+    }
 };
 
 class Squeak: public QuackBehavior {
@@ -44,7 +49,9 @@ public:
 };
 
 class MuteQuack : public QuackBehavior {
-    /* TODO */
+    void quack() override {
+        cout << "<<Silent>>" << endl;
+    }
 };
 
 // 오리 클래스
@@ -78,6 +85,7 @@ public:
     void display() override {
         cout << "I'm a Mallar Duck." << endl;
     }
+    
 };
 
 class RedheadDuck: public Duck{
